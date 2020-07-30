@@ -1,0 +1,65 @@
+body {
+  background-color: #000;
+  font-family: monospace;
+  font-size: 15px;
+}
+main, footer {
+  width: 250px;
+  border: 1px solid black;
+  color: #fff;
+  margin: 10px 0;
+}
+div {
+  xtext-align: center;
+}
+
+li {
+  text-decoration: none;
+}
+
+.mytime {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.live {
+  margin-bottom: 20px;
+
+}
+
+button {
+  outline: none;
+  background-color: black;
+  color: #8b8080;
+  border-radius: 20px;
+}
+
+.breaktime {
+  color: #7eaff8;
+}
+
+.current-study {
+  font-size: 15px;
+  font-weight: bold;
+  width: 130px;
+  display: block;
+  line-height: 25px;
+}
+
+input {
+  background-color: black;
+  color: #ccc;
+}
+
+footer {
+  font-size: 13px;
+}
+
+textarea {
+  background-color: black;
+  color: #ccc;
+}
+
+span.notes {
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <div id="root">
+      <main>
+        <div class="live">
+          LIVE
+        </div>
+
+        <div>
+          Current time<br>
+          <span class="mytime" id="datetime"></span>
+        </div>
+
+        <br>
+
+        <div>
+          Study time
+          <span v-if="studying">
+            <button v-on:click="isStudying">pause</button><br>
+            <span class="mytime">
+              {{ timecontext }}
+            </span>
+          </span>
+          <span v-else>
+            <button v-on:click="isStudying">start</button><br>
+            <span class="mytime">
+              {{ timecontext }}
+            </span>
+          </span>
+        </div>
+
+        <br>
+
+        <div class="breaktime">
+          <span v-if="breaktime">
+            15 minutes break. <br>
+            be back by <span class="mytime">{{ breakMessage }}</span><br><br>
+            <button v-on:click="takeBreak"> back to study</button>
+          </span>
+          <span v-else>
+            <button v-on:click="takeBreak">take a break</button>
+          </span>
+        </div>
+
+        <br>
+        <div>
+          What am I studying? <br>
+          <span class="current-study">{{ subject }}</span>
+        </div>
+      </main>
+
+      <footer>
+          <pre class="notes">{{notes}}</pre>
+      </footer>
+
+      <input style="margin-top:250px;" v-model="subject"> <br>
+      <textarea v-model="notes"></textarea>
+    </div>
+    <script src="./main.js"></script>
+    <script src="vuecode.js"></script>
+  </body>
+</html>
