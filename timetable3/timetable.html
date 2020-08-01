@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <div id="root">
+      <main>
+        <span class="live">
+          <div>
+            [ LIVE ]
+            Current time:
+            <span id="datetime"></span>
+          </div>
+        </span>
+        <br>
+
+        <div class="studytime">
+          study time
+          <span v-if="breaktime">
+            <button v-on:click="takeBreak"> study </button>
+          </span>
+          <span v-else>
+            <button v-on:click="takeBreak">break</button>
+          </span>
+
+          <span v-if="studying">
+            <br>
+            <a href="#" @click="isStudying">
+              <span class="mytime">
+                {{ timecontext }}
+              </span>
+            </a>
+          </span>
+          <span v-else>
+            <br>
+            <a href="#" @click="isStudying">
+              <span class="mytime">
+                {{ timecontext }}
+              </span>
+            </a>
+          </span>
+        </div>
+
+        <div class="breaktime">
+          <span v-if="breaktime">
+            {{ interval }} minutes break (<span>{{ breakMessage }}</span>) <br>
+          </span>
+          <span v-else>
+          </span>
+        </div>
+
+        <br>
+
+        <div class="schedule">
+          <span v-if="submitted === false">
+            <form>
+              Start time: <input v-model="startTime" type="text"><br>
+              <input type="radio" name="interval" @click="interval=10"> 10
+              <input type="radio" name="interval" @click="interval=15" checked> 15
+              <button @click="tableFormSubmit">submit</button>
+            </form>
+          </span>
+          <span v-if="submitted">
+            Time table (60/{{interval}}) <br><br>
+             <ul>
+              <li v-for="s in schedule">
+                <a href="#" @click="s.fin = !s.fin">
+                  <span v-if="!s.fin">
+                    {{ s.period }}
+                  </span>
+                  <del v-else>
+                    {{ s.period }}
+                  </del>
+                </a>
+              </li>
+            </ul>
+  
+            <br>
+            
+            <button @click="newPeriod">+</button>
+            <button @click="newBreak">LB</button>
+            <button @click="clearSchedule">CLR</button>
+
+         </span>
+
+        </div>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+    <script src="vuecode.js"></script>
+  </body>
+</html>

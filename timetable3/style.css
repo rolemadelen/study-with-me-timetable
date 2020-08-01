@@ -1,0 +1,94 @@
+body {
+  background-color: #000;
+  font-family: monospace;
+  font-size: 14px;
+}
+main, footer {
+  width: 250px;
+  border: 1px solid black;
+  color: #fff;
+  margin: 5px 0;
+  margin-left: 3px;
+}
+
+li {
+  text-decoration: none;
+}
+
+#datetime {
+  font-size: 15px;
+}
+
+.mytime {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.live {
+  margin-bottom: 20px;
+
+}
+
+button {
+  outline: none;
+  background-color: black;
+  color: #8b8080;
+  border-radius: 20px;
+}
+
+.breaktime {
+  font-weight: bold;
+  color: #66b8ff;
+  margin-left: 10px;
+}
+
+input {
+  background-color: black;
+  color: #ccc;
+}
+
+footer {
+  font-size: 13px;
+}
+
+textarea {
+  background-color: black;
+  color: #ccc;
+  margin-top: 300px;
+}
+
+span.notes {
+  overflow-wrap: anywhere;
+}
+
+.schedule {
+  width: 160px;
+  text-align: center;
+  font-size: 15px;
+}
+.schedule ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule li {
+  padding: 1.3px 0;
+}
+
+del {
+  color: #838383;
+}
+
+a {
+  color: white;
+  text-decoration: none
+}
+
+.live {
+  font-size: 10px;
+}
+
+.studytime {
+  margin-left: 15px;
+}
