@@ -55,7 +55,7 @@ const app = new Vue({
       this.schedule.push({period: 'Long break', fin: false})
 
       let hour = 1*this.endTime.slice(0,2);
-      let min = 1*this.endTime.slice(2,4) + 45;
+      let min = 1*this.endTime.slice(2,4) + (60-this.interval);
 
       if (min > 59) {
         hour += 1
