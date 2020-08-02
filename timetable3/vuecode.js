@@ -69,8 +69,6 @@ const app = new Vue({
       this.longBreakCount += 1;
     },
     clearSchedule() {
-      this.studying = false;
-      this.breaktime = false;
       this.submitted = false;
       this.startTime = "0600";
       this.endTime = "0700";
